@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Add the favicon link here -->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('1@.jpeg'); /* Add the path to your background image */
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 50%;
+        margin: 100px auto;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: darkcyan;
+        font-family: cursive; /* Set the font style to cursive */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid darkcyan;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: darkcyan;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #008b8b; /* Dark cyan shade */
+    }
+
+    .terms-checkbox {
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>User Registration</h1>
+    <form id="registrationForm" action="#" method="post" onsubmit="return registerUser()">
+        <input type="text" id="newUsername" name="newUsername" placeholder="New Username" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="newPassword" name="newPassword" placeholder="New Password" required>
+        <label for="termsCheckbox" class="terms-checkbox">
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox" required>
+            I agree to the terms and conditions
+        </label>
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<script>
+    function registerUser() {
+        var newUsername = document.getElementById("newUsername").value;
+        var email = document.getElementById("email").value;
+        var newPassword = document.getElementById("newPassword").value;
+        var termsCheckbox = document.getElementById("termsCheckbox");
+
+        if (newUsername !== "" && email !== "" && newPassword !== "" && termsCheckbox.checked) {
+            // Add your registration logic here, such as sending the data to a server or storing it locally
+            alert("Registration successful. Redirecting...");
+            
+            // Redirect to the registration success page
+            window.location.href = "registration-success.html";
+            return false; // Prevent the form submission
+        } else {
+            alert("Please fill in all the required fields and agree to the terms and conditions.");
+            return false; // Prevent the form submission
+        }
+    }
+</script>
+
+</body>
+</html>

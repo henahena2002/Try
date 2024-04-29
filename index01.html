@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Login</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Add the favicon link here -->
+<link rel="stylesheet" type="text/css" href="CSS.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+<div class="container">
+    <video autoplay loop muted width="75" style="display: block; margin: 0 auto;">
+        <source src="293710dde527cc167902a6d4621baf51.mp4" type="video/mp4"> <!-- Add the path to your MP4 logo video here -->
+    </video>
+    <h1>User Login</h1>
+    <div class="input-group">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <img src="tokki.jpeg" alt="Username Icon" class="input-icon">
+    </div>
+    <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <img src="bunss.jpeg" alt="Password Icon" class="input-icon">
+    </div>
+    <form id="loginForm" action="#" method="post" onsubmit="return loginUser()">
+        <input type="submit" value="Login">
+    </form>
+    <div class="signup-methods">
+        <button class="facebook" onclick="window.location.href = 'https://www.facebook.com';">Sign up with Facebook</button>
+        <button class="google" onclick="window.location.href = 'https://www.google.com';">Sign up with Google</button>
+        <button class="instagram" onclick="window.location.href = 'https://www.instagram.com';">Sign up with Instagram</button>
+        <p>Don't have an account? <a href="registration.html" style="color: darkcyan;">Register here</a></p> <!-- Link to the registration form -->
+     </div>
+</div>
+
+<script>
+    function loginUser() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username !== "" && password !== "") {
+            // Simulating a successful login with a timeout
+            setTimeout(function() {
+                alert("Login successful. Redirecting...");
+                window.location.href = "https://wenifredodoctor.github.io/2QM6-NAVIGATION-BAR-AND-FAVICON/";
+            }, 1000); // Timeout for demonstration purposes
+
+            return false; // Prevent the form submission
+        } else {
+            alert("Please enter a valid username and password.");
+            return false; // Prevent the form submission
+        }
+    }
+</script>
+
+</body>
+</html>

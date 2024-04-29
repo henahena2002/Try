@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+    background-image: url('1@.jpeg');
+    background-size: cover;
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-image: url('f7b14fd2-cbda-4d8f-9cc0-593aa41c45bb.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center the content within the container */
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {background-position: 0%;}
+    100% {background-position: 100%;}
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0; /* Position the icon to the left of the input box */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Adjust the width of the icon */
+    height: 30px; /* Adjust the height of the icon */
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent; /* Set the background color to transparent */
+    text-align: center; /* Center the text within the input field */
+    color: darkcyan; /* Set the text color for the login button to darkcyan */
+    border: 1px solid black; /* Add a black border to the login button */
+
+}
+
+input[type="text"] {
+    background-image: url('username-icon.png'); /* Add the path to your username icon image */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the icon position */
+    padding-left: 40px; /* Ensure space for the icon */
+}
+
+input[type="password"] {
+    background-image: url('password-icon.png'); /* Add the path to your password icon image */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the icon position */
+    padding-left: 40px; /* Ensure space for the icon */
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Set the placeholder text color with transparency */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px; /* Adjust the position of the icon */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Adjust the width of the icon */
+    height: 30px; /* Adjust the height of the icon */
+    border-radius: 50%; /* Make the icon circular */
+    background-size: cover; /* Ensure the icon covers the circular shape */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent; /* Set the background color to transparent */
+    text-align: center; /* Center the text within the button */
+    color: darkcyan; /* Set the text color for the login button to black */
+    border: 1px solid black; /* Add a black border to the login button */
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add a transparent white background color on hover */
+}
+
+.signup-methods button {
+    width: 40px; /* Set the width of the button */
+    height: 40px; /* Set the height of the button */
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    color: transparent; /* Hide the text content */
+    border: none;
+    border-radius: 50%; /* Make the button round */
+    cursor: pointer;
+    background-size: 100% 100%; /* Ensure the background image covers the button */
+}
+
+.signup-methods button.facebook {
+    background-image: url('fb.jpg'); /* Add the path to your Facebook icon image */
+    background-color: #3b5998;
+}
+
+.signup-methods button.google {
+    background-image: url('gg.jpg'); /* Add the path to your Google icon image */
+    background-color: #4285f4;
+}
+
+.signup-methods button.instagram {
+    background-image: url('ig.jpg'); /* Add the path to your Instagram icon image */
+    background-color: #e1306c;
+}
